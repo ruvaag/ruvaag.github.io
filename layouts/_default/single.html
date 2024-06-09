@@ -1,0 +1,11 @@
+{{ define "main" }}
+<header>
+    <ul class="flex-row single-header">
+        <li> <h1 class="single-title"> {{ .Title }} </h1> </li>
+        <li> <div class="single-date"> {{ .Date | time.Format "2006-01-02" }} </div> </li>
+    </ul>
+</header>
+<main>
+    <div class="single-content"> {{ .Content }} </div>
+</main>
+{{ end }}

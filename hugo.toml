@@ -1,0 +1,40 @@
+title = 'ruvaag'
+languageCode = 'en-us'
+pluralizeListTitles = false
+capitalizeListTitles = false
+baseURL = 'https://ruvaag.github.io/'
+
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+
+[menus]
+
+[[menus.main]]
+name = 'archive'
+weight = 1
+pageref = '/posts'
+[[menus.main]]
+name = 'home'
+weight = 2
+pageref = '/'
+
+[[menus.footer]]
+weight = 1
+name = 'email'
+url = 'mailto:ruvaag@gmail.com'
+[[menus.footer]]
+name = 'x'
+weight = 2
+url = 'https://x.com/ruvaag'
+[menus.footer.params]
+rel = 'external'
+
+[params]
+[params.author]
+name = 'ruvaag'
+email = 'ruvaag@gmail.com'
