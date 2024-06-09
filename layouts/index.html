@@ -1,0 +1,15 @@
+{{ define "nav" }}
+<nav>
+    <ul class="flex-row site-header-nav">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+{{ define "main" }}
+<main>
+    <div class="index-content"> {{ .Content }} </div>
+</main>
+{{ end }}

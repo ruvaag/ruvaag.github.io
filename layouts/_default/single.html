@@ -1,0 +1,32 @@
+{{ define "nav" }}
+<nav>
+    <ul class="flex-row single-header-nav">
+        <li><a href="{{ .Parent.RelPermalink }}">back</a></li>
+    </ul>
+</nav>
+{{ end }}
+
+{{ define "main" }}
+<header>
+    <ul class="flex-row single-header">
+        <li> <h1 class="single-title"> {{ .Title }} </h1> </li>
+        <li> <div class="single-date"> {{ .Date | time.Format "2006-01-02" }} </div> </li>
+    </ul>
+</header>
+<main>
+    <div class="single-content"> {{ .Content }} </div>
+</main>
+{{ end }}
+
+{{ define "footer" }}
+<footer>
+    <nav>
+        <ul class="flex-row single-footer-nav">
+            {{ range .Site.Menus.footer}}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</footer>
+{{ end }}
+

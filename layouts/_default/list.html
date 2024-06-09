@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main>
+    <h1 class="list-title"> {{ .Title }} </h1>
+    <div>
+        {{ range .RegularPages }}
+        <ul class="flex-row list-items">
+            <li> {{ .Date | time.Format "2006-01-02" }} </li>
+            <li> <a href="{{.RelPermalink}}"> {{ .Title }} </a> </li>
+        </ul>
+        {{ end }}
+    </div>
+</main>
+{{ end }}
+
+{{ define "footer" }}
+<footer>
+    <nav>
+        <ul class="flex-row list-footer-nav">
+            {{ range .Site.Menus.footer}}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</footer>
+{{ end }}
+
